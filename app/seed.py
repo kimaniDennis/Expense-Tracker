@@ -10,7 +10,8 @@ with app.app_context():
     ]
 
     for user_data in users:
-        user = User(username=user_data['username'], email=user_data['email'], password=user_data['password'])
+        user = User(username=user_data['username'], email=user_data['email'])
+        user.set_password(user_data['password'])
         db.session.add(user)
         db.session.commit()
         print("Sample users added successfully!!")
