@@ -23,7 +23,7 @@ db.init_app(app)
 @app.route('/', methods=['GET'], endpoint='index')
 def index():
     return jsonify({
-        "message": "Welcome to Digishop App."
+        "message": "Welcome to Expense Tracker App."
     }), 200
 
 # Protected login route requiring JWT authentication
